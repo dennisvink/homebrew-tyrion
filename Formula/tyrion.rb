@@ -1,8 +1,8 @@
 class Tyrion < Formula
-  desc "Tiny compiler for the Tyrion programming language"
+  desc "Tiny Python-derived scripting language"
   homepage "https://github.com/dennisvink/tyrion"
-  url "https://github.com/dennisvink/tyrion/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "a8f033ac762393b802dc3789398834bcdc977bc9f9b18ace0776a9e8e628ad43"
+  url "https://github.com/dennisvink/tyrion/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "c7b01276356c993a5c5ca87ac53d96f46eb679ae431b6046a5a08b7ce2feecb2"
   license "MIT"
 
   depends_on "rust" => :build
@@ -15,7 +15,7 @@ class Tyrion < Formula
     (testpath/"hello.ty").write <<~EOS
       print("hi")
     EOS
-    system bin/"tyrion", "hello.ty", "hello_bin"
-    assert_equal "hi\n", shell_output("./hello_bin")
+    system bin/"tyrion", "hello.ty"
+    assert_equal "hi\n"
   end
 end
