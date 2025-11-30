@@ -15,7 +15,6 @@ class Tyrion < Formula
     (testpath/"hello.ty").write <<~EOS
       print("hi")
     EOS
-    system bin/"tyrion", "hello.ty"
-    assert_equal "hi\n"
+    assert_equal "hi\n", shell_output("#{bin}/tyrion hello.ty")
   end
 end
