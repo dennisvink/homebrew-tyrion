@@ -1,8 +1,8 @@
 class Tyrion < Formula
   desc "Tiny Python-derived scripting language"
   homepage "https://github.com/dennisvink/tyrion"
-  url "https://github.com/dennisvink/tyrion/archive/refs/tags/v0.3.7.tar.gz"
-  sha256 "7b2cdb19d27f85c801f2448e2496c92370c4775db87f74dba9a2d6c5e65dce27"
+  url "https://github.com/dennisvink/tyrion/archive/refs/tags/v0.3.8.tar.gz"
+  sha256 "96b62c8975ab2bbdb754ec4ca7c98a2fc7ee9d2c0dd75cb6eefb2e188caa0804"
   license "MIT"
 
   depends_on "rust" => :build
